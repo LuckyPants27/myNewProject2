@@ -34,9 +34,9 @@ public class Main {
         System.out.println("На каждого ученика рассчитано " + eachStudentNumberOfSheets + " листов бумаги");
 
 
-        byte bottleMakingMachineProductivityIn2Mins = 16;
-        int bottleMakingMachineProductivityIn20Mins = bottleMakingMachineProductivityIn2Mins * 10;
-        int bottleMakingMachineProductivityInDay = bottleMakingMachineProductivityIn20Mins * 72;
+        byte bottleMakingMachineProductivityIn1Min = 8;
+        int bottleMakingMachineProductivityIn20Mins = bottleMakingMachineProductivityIn1Min * 20;
+        int bottleMakingMachineProductivityInDay = 24 * 60 * bottleMakingMachineProductivityIn1Min;
         int bottleMakingMachineProductivityIn3Days = bottleMakingMachineProductivityInDay * 3;
         int bottleMakingMachineProductivityInMonth = bottleMakingMachineProductivityIn3Days * 10;
 
@@ -82,17 +82,23 @@ public class Main {
         int secondEmployeeSalaryInMonth = 83690;
         int thirdEmployeeSalaryInMonth = 76230;
 
-        int firstEmployeeAnnualIncome = firstEmployeeSalaryInMonth * 12;
-        int secondEmployeeAnnualIncome = secondEmployeeSalaryInMonth * 12;
-        int thirdEmployeeAnnualIncome = thirdEmployeeSalaryInMonth * 12;
+        int onePercentOfSalaryFirstEmployee = (firstEmployeeSalaryInMonth/100);
+        int onePercentOfSalarySecondEmployee = (secondEmployeeSalaryInMonth/100);
+        int onePercentOfSalaryThirdEmployee = (thirdEmployeeSalaryInMonth/100);
 
-        int firstEmployeeIncreasedSalaryInMonth = firstEmployeeSalaryInMonth + (firstEmployeeSalaryInMonth/100) * 10;
-        int secondEmployeeIncreasedSalaryInMonth = secondEmployeeSalaryInMonth + (secondEmployeeSalaryInMonth/100) * 10;
-        int thirdEmployeeIncreasedSalaryInMonth = thirdEmployeeSalaryInMonth + (thirdEmployeeSalaryInMonth/100) * 10;
+        byte monthsInAYear = 12;
 
-        int firstEmployeeIncreasedAnnualIncome = firstEmployeeIncreasedSalaryInMonth * 12;
-        int secondEmployeeIncreasedAnnualIncome = secondEmployeeIncreasedSalaryInMonth * 12;
-        int thirdEmployeeIncreasedAnnualIncome = thirdEmployeeIncreasedSalaryInMonth * 12;
+        int firstEmployeeAnnualIncome = firstEmployeeSalaryInMonth * monthsInAYear;
+        int secondEmployeeAnnualIncome = secondEmployeeSalaryInMonth * monthsInAYear;
+        int thirdEmployeeAnnualIncome = thirdEmployeeSalaryInMonth * monthsInAYear;
+
+        int firstEmployeeIncreasedSalaryInMonth = firstEmployeeSalaryInMonth + onePercentOfSalaryFirstEmployee * 10;
+        int secondEmployeeIncreasedSalaryInMonth = secondEmployeeSalaryInMonth + onePercentOfSalarySecondEmployee * 10;
+        int thirdEmployeeIncreasedSalaryInMonth = thirdEmployeeSalaryInMonth + onePercentOfSalaryThirdEmployee * 10;
+
+        int firstEmployeeIncreasedAnnualIncome = firstEmployeeIncreasedSalaryInMonth * monthsInAYear;
+        int secondEmployeeIncreasedAnnualIncome = secondEmployeeIncreasedSalaryInMonth * monthsInAYear;
+        int thirdEmployeeIncreasedAnnualIncome = thirdEmployeeIncreasedSalaryInMonth * monthsInAYear;
 
         int diffBetweenSalaryFirstEmployee = firstEmployeeIncreasedAnnualIncome - firstEmployeeAnnualIncome;
         int diffBetweenSalarySecondEmployee = secondEmployeeIncreasedAnnualIncome - secondEmployeeAnnualIncome;
