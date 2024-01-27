@@ -34,7 +34,7 @@ public class Main {
         System.out.println("На каждого ученика рассчитано " + eachStudentNumberOfSheets + " листов бумаги");
 
 
-        byte bottleMakingMachineProductivityIn1Min = 8;
+        byte bottleMakingMachineProductivityIn1Min = 16/2;
         int bottleMakingMachineProductivityIn20Mins = bottleMakingMachineProductivityIn1Min * 20;
         int bottleMakingMachineProductivityInDay = 24 * 60 * bottleMakingMachineProductivityIn1Min;
         int bottleMakingMachineProductivityIn3Days = bottleMakingMachineProductivityInDay * 3;
@@ -81,20 +81,20 @@ public class Main {
         int firstEmployeeSalaryInMonth = 67760;
         int secondEmployeeSalaryInMonth = 83690;
         int thirdEmployeeSalaryInMonth = 76230;
+        byte monthsInAYear = 12;
+        byte increasePercent = 10;
 
         int onePercentOfSalaryFirstEmployee = (firstEmployeeSalaryInMonth/100);
         int onePercentOfSalarySecondEmployee = (secondEmployeeSalaryInMonth/100);
         int onePercentOfSalaryThirdEmployee = (thirdEmployeeSalaryInMonth/100);
 
-        byte monthsInAYear = 12;
-
         int firstEmployeeAnnualIncome = firstEmployeeSalaryInMonth * monthsInAYear;
         int secondEmployeeAnnualIncome = secondEmployeeSalaryInMonth * monthsInAYear;
         int thirdEmployeeAnnualIncome = thirdEmployeeSalaryInMonth * monthsInAYear;
 
-        int firstEmployeeIncreasedSalaryInMonth = firstEmployeeSalaryInMonth + onePercentOfSalaryFirstEmployee * 10;
-        int secondEmployeeIncreasedSalaryInMonth = secondEmployeeSalaryInMonth + onePercentOfSalarySecondEmployee * 10;
-        int thirdEmployeeIncreasedSalaryInMonth = thirdEmployeeSalaryInMonth + onePercentOfSalaryThirdEmployee * 10;
+        int firstEmployeeIncreasedSalaryInMonth = firstEmployeeSalaryInMonth + onePercentOfSalaryFirstEmployee * increasePercent;
+        int secondEmployeeIncreasedSalaryInMonth = secondEmployeeSalaryInMonth + onePercentOfSalarySecondEmployee * increasePercent;
+        int thirdEmployeeIncreasedSalaryInMonth = thirdEmployeeSalaryInMonth + onePercentOfSalaryThirdEmployee * increasePercent;
 
         int firstEmployeeIncreasedAnnualIncome = firstEmployeeIncreasedSalaryInMonth * monthsInAYear;
         int secondEmployeeIncreasedAnnualIncome = secondEmployeeIncreasedSalaryInMonth * monthsInAYear;
